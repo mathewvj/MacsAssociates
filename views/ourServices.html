@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accounting Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: "Barlow Condensed", serif;  
+        }
+
+        .macs-font {
+            font-weight: 600;
+            font-style: normal;
+            color: rgb(238, 162, 21);
+            
+        }
+        .adjust-strong {
+            position: relative;
+            top: 5px; 
+        }
+
+        @media (min-width: 992px) {
+            .navbar-logo {
+            height: 4rem !important;
+            width: 4rem !important;
+            }
+        
+            .adjust-strong {
+            font-size: 2rem !important;
+            }
+        }
+
+        .navbar{
+            height: 4.5rem;
+            
+        }
+        .hero-section {
+            margin-top: 4.5rem; 
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+        }
+        .nested-dropdown {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="../assets/images/MACS11.png" style="height: 3rem; width: 3rem;" alt="MACS Associates Logo" class="navbar-logo">
+                <strong class="macs-font adjust-strong" style="font-size: 1.5rem;">MACS <span style="color: rgba(18, 50, 168, 0.867);">ASSOCIATES</span></strong>
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container mt-5">
+            <h2 class="text-center mb-5 fw-bold">Our Services</h2>
+            <div class="accordion" id="accountingServicesAccordion">
+                <!-- Heading 1: Tax Accounting -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingAccountingBookkeeping">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTax">
+                            Accounting and Bookkeeping
+                        </button>
+                    </h2>
+                    <div id="collapseTax" class="accordion-collapse collapse" data-bs-parent="#accountingServicesAccordion">
+                        <div class="accordion nested-dropdown">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinancialTransactions">
+                                        Recording financial transactions
+                                    </button>
+                                </h3>
+                                <div id="collapseFinancialTransactions" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneralLedger">
+                                        Maintaining general ledger and subsidiary ledgers
+                                    </button>
+                                </h3>
+                                <div id="collapseGeneralLedger" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccountsPayable">
+                                        Accounts payable and receivable management
+                                    </button>
+                                </h3>
+                                <div id="collapseAccountsPayable" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBankAndCredit">
+                                        Bank and credit card reconciliations
+                                    </button>
+                                </h3>
+                                <div id="collapseBankAndCredit" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePayrollProcess">
+                                        Payroll processing and compliance
+                                    </button>
+                                </h3>
+                                <div id="collapsePayrollProcess" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- More tax-related subheadings... -->
+                             <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrettyCash">
+                                        Petty cash management
+                                    </button>
+                                </h3>
+                                <div id="collapsePrettyCash" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinancialStatements">
+                                        Preparation of financial statements (Profit & Loss, Balance Sheet, Cash Flow Statement)
+                                    </button>
+                                </h3>
+                                <div id="collapseFinancialStatements" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseManagementReport">
+                                        Management reports (budgeting, forecasting, variance analysis)
+                                    </button>
+                                </h3>
+                                <div id="collapseManagementReport" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- More tax-related subheadings... -->
+                             <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuditPreparation">
+                                        Audit preparation and support
+                                    </button>
+                                </h3>
+                                <div id="collapseAuditPreparation" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompliance">
+                                        Compliance with IFRS, GAAP, or other accounting standards
+                                    </button>
+                                </h3>
+                                <div id="collapseCompliance" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- More tax-related subheadings... -->
+                             <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinancialPlanning">
+                                        Financial planning and analysis
+                                    </button>
+                                </h3>
+                                <div id="collapseFinancialPlanning" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCashFlow">
+                                        Cash flow management
+                                    </button>
+                                </h3>
+                                <div id="collapseCashFlow" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBusinessStructuring">
+                                        Business structuring and entity setup
+                                    </button>
+                                </h3>
+                                <div id="collapseBusinessStructuring" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInternalControl">
+                                        Internal control assessments and risk management
+                                    </button>
+                                </h3>
+                                <div id="collapseInternalControl" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- More tax-related subheadings... -->
+                             <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFixedAsset">
+                                        Fixed asset management
+                                    </button>
+                                </h3>
+                                <div id="collapseFixedAsset" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInventoryAccounting">
+                                        Inventory accounting
+                                    </button>
+                                </h3>
+                                <div id="collapseInventoryAccounting" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- More tax-related subheadings... -->
+                             <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConsolidation">
+                                        Consolidation of financial statements for group companies
+                                    </button>
+                                </h3>
+                                <div id="collapseConsolidation" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More tax-related subheadings... -->
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingAccountingBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForensicAccounting">
+                                        Forensic accounting and fraud investigation
+                                    </button>
+                                </h3>
+                                <div id="collapseForensicAccounting" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Comprehensive individual tax return preparation, ensuring maximum deductions and compliance with current tax laws.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                <!-- Heading 2: Bookkeeping -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingStatutoryAndInternalAuditors">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStatutoryAndInternalAuditors">
+                            Statutory and Internal Auditors
+                        </button>
+                    </h2>
+                    <div id="collapseStatutoryAndInternalAuditors" class="accordion-collapse collapse" data-bs-parent="#accountingServicesAccordion">
+                        <div class="accordion nested-dropdown">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="subheadingDailyBookkeeping">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDailyBookkeeping">
+                                        Daily Transaction Recording
+                                    </button>
+                                </h3>
+                                <div id="collapseDailyBookkeeping" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Accurate and timely recording of daily financial transactions for precise financial tracking.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More bookkeeping-related subheadings... -->
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Additional 6 more headings would be structured similarly -->
+            </div>
+        </div>
+
+    </section>
+    
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
