@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Payroll management</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: "Barlow Condensed", serif;  
+        }
+
+        .macs-font {
+            font-weight: 600;
+            font-style: normal;
+            color: rgb(238, 162, 21);
+            
+        }
+        .adjust-strong {
+            position: relative;
+            top: 5px; 
+        }
+
+        @media (min-width: 992px) {
+            .navbar-logo {
+            height: 4rem !important;
+            width: 4rem !important;
+            }
+        
+            .adjust-strong {
+            font-size: 2rem !important;
+            }
+        }
+
+        .navbar{
+            height: 4.5rem;
+            
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('../assets/images/Payroll.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+            margin-top: 4.5rem; 
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-section {
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-heading {
+            color: #0d6efd;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #0d6efd;
+            display: inline-block;
+        }
+
+        .sub-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .sub-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .sub-heading {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .service-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid rgb(245, 162, 7);
+        }
+
+        .service-title {
+            color: #2335bb;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .service-description {
+            color: #31393f;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="../assets/images/MACS11.png" style="height: 3rem; width: 3rem;" alt="MACS Associates Logo" class="navbar-logo">
+                <strong class="macs-font adjust-strong" style="font-size: 1.5rem;">MACS <span style="color: rgba(18, 50, 168, 0.867);">ASSOCIATES</span></strong>
+            </a>
+        </div>
+    </nav>
+    <!-- Hero Section with Background Image -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title"> Payroll management</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Financial Services Section -->
+        <section class="main-section">
+            <div class="container">
+                <!-- <h2 class="main-heading">Financial Services</h2> -->
+                
+                <div class="row g-4 align-items-stretch">
+                    <!-- VAT Registration & Deregistration -->
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading">Payroll Processing</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Calculation of employee salaries, wages, bonuses, and deductions</h4>
+                                <p class="service-description">Ensuring accurate payroll processing by calculating salaries, wages, bonuses, and deductions for employees.</p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Compliance with tax laws and regulations</h4>
+                                <p class="service-description"> Ensuring payroll adheres to tax laws and labor regulations to avoid legal issues and penalties.</p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Generation of payroll reports</h4>
+                                <p class="service-description">Creating detailed payroll reports for record-keeping, financial analysis, and compliance purposes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading"> Salary Disbursement</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Direct deposit to employee bank accounts</h4>
+                                <p class="service-description">Transferring employee salaries directly to their bank accounts for a secure and efficient payroll process.</p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Distribution of payslips (physical or electronic)</h4>
+                                <p class="service-description">Providing employees with detailed salary breakdowns through printed or digital payslips for transparency and record-keeping.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading">Contributions</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Social security contributions (e.g., UAE's GOSI for GCC nationals)</h4>
+                                <p class="service-description">Deducting and contributing to government-mandated social security schemes, such as GOSI, to ensure employee benefits like pensions and insurance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading">Employee Benefits & Deductions Management</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Leave salary and end-of-service gratuity calculations</h4>
+                                <p class="service-description">Calculating employee leave salaries and gratuity payments based on labor laws and company policies to ensure fair compensation.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Overtime and incentive processing</h4>
+                                <p class="service-description">Managing additional payments for extra work hours and performance-based incentives to ensure accurate and timely compensation.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Insurance and pension contributions</h4>
+                                <p class="service-description"> Deducting and contributing to employee insurance and pension schemes to provide financial security and benefits.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading"> Time & Attendance Management</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Integration with biometric or digital attendance systems</h4>
+                                <p class="service-description"> Automating payroll by linking attendance records with biometric or digital systems for accurate salary calculations.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Calculation of leaves, sick days, and absences</h4>
+                                <p class="service-description">Tracking employee leave, sick days, and absences to ensure correct salary deductions or payments.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Overtime tracking</h4>
+                                <p class="service-description"> Monitoring extra working hours to calculate and process overtime payments accurately.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading">Compliance & Legal Support</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Ensuring adherence to UAE Labour Law (or applicable regulations)</h4>
+                                <p class="service-description">Ensuring payroll processes comply with UAE Labour Law or relevant labor regulations to protect employee rights and avoid legal issues.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Compliance with WPS (Wage Protection System) in the UAE</h4>
+                                <p class="service-description">Processing employee salaries through the Wage Protection System (WPS) to ensure timely and transparent payments as mandated by UAE regulations.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Maintenance of payroll records for audits</h4>
+                                <p class="service-description"> Keeping accurate payroll records for audits, ensuring transparency, compliance, and easy verification of employee payments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading">Reporting & Documentation</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Monthly and annual payroll reports</h4>
+                                <p class="service-description">Generating detailed payroll summaries for financial tracking, compliance, and budgeting.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Employee salary certificates and pay slips</h4>
+                                <p class="service-description">Providing official salary certificates and pay slips for employee records and verification purposes.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Custom payroll analytics and MIS reports</h4>
+                                <p class="service-description"> Creating customized payroll reports and management information system (MIS) analytics for better decision-making and financial planning.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading">End-of-Service Benefits & Final Settlement</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Gratuity calculation and processing</h4>
+                                <p class="service-description">Computing and processing end-of-service gratuity payments as per labor laws and company policies.
+                                </p>
+                            </div>
+
+                            <div class="service-item">
+                                <h4 class="service-title">Final settlement processing for resignations/terminations</h4>
+                                <p class="service-description">Handling full and final settlements, including pending salaries, benefits, and deductions, for employees leaving the company.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sub-section h-100 d-flex flex-column">
+                            <h3 class="sub-heading">Employee Self-Service Portal (if applicable)</h3>
+                            
+                            <div class="service-item">
+                                <h4 class="service-title">Online access for employees to view payslips, tax documents, and leave balances</h4>
+                                <p class="service-description">Providing a digital platform where employees can securely access their payroll details, tax documents, and leave balances anytime.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
