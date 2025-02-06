@@ -8,16 +8,20 @@ body {
   }
 
   .custom-toggler {
-    border: none;
-    background: none;
-    padding: 0.5rem;
- }
+    background-color: transparent; /* Transparent button */
+    border: none; /* Remove border */
+    outline: none; /* No outline */
+    padding: 8px 12px; /* Padding for better clickability */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  }
 
-  /* Close icon styling */
-  .custom-toggler .close-icon {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #000; 
+  .custom-toggler:focus {
+      box-shadow: none; /* Remove focus outline */
+  }
+
+  .navbar-toggle-icon, .close-icon {
+      font-size: 1.8rem; /* Icon size */
+      color: #333; /* Icon color */
   }
 
 
@@ -47,20 +51,28 @@ body {
     height: 4.5rem;
     
   }
+  .close-icon {
+    display: inline-block;
+    font-size:1.62rem;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+  }
+
   .navbar-nav .nav-item .nav-link {
     position: relative;
     color: #000000; 
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
-  }
-  
-  .navbar-nav .nav-item .nav-link:hover {
-    color: rgb(238, 162, 21); 
-  }
-  
-  /* Add an underline effect on hover */ 
-  .navbar-nav .nav-item .nav-link::after {
+}
+
+/* Hover Effect: Change color and underline */
+.navbar-nav .nav-item .nav-link:hover {
+    color: rgb(238, 162, 21);
+}
+
+.navbar-nav .nav-item .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
@@ -69,12 +81,29 @@ body {
     bottom: 0;
     left: 50%;
     transition: width 0.3s ease, left 0.3s ease;
-  }
-  
-  .navbar-nav .nav-item .nav-link:hover::after {
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
     width: 100%;
     left: 0;
-  }
+}
+
+/* Active Link Style */
+.navbar-nav .nav-item .nav-link.active {
+    color: rgb(238, 162, 21); /* Same color for active link */
+}
+
+/* Active Link Underline Effect */
+.navbar-nav .nav-item .nav-link.active::after {
+    width: 100%; /* Full width underline */
+    left: 0; /* Align to the left */
+}
+
+  /* Default Link Style */
+
+
+/* Active Link Style */
+
   @media(max-width: 992px){
     .navbar-nav .nav-item .nav-link:hover::after {
       width: 0%; 
@@ -82,7 +111,7 @@ body {
       
     }
     .navbar-collapse {
-      background-color: #ffffffaa;
+      background-color: #ffffffbc;
   }
   }
   
