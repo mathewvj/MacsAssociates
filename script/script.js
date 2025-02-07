@@ -95,3 +95,34 @@ window.addEventListener('scroll', setActiveLink);
 // Run the function initially to set the active link on page load
 document.addEventListener('DOMContentLoaded', setActiveLink);
 
+
+
+//form submission
+document.querySelector("form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value
+    };
+
+    try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbxuQRL7M0UO0wNl_9kjuUHaBxF3DVULD8nTLA0Gz7O8zVeTHF2KQgIJ3At55Rr1S_ckOA/exec", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        if (result.status === "success") {
+            alert("Message sent successfully!");
+        } else {
+            alert("Error sending message!");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Failed to connect to the server.");
+    }
+});
