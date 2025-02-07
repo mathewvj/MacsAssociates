@@ -98,9 +98,9 @@ document.addEventListener('DOMContentLoaded', setActiveLink);
 
 
 //form submission
-document.getElementById("contactForm").addEventListener("submit", async function(event) {
+document.getElementById("contactForm").addEventListener("submit", function (event) {
     event.preventDefault();
-    
+
     const formData = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -108,28 +108,23 @@ document.getElementById("contactForm").addEventListener("submit", async function
         message: document.getElementById("message").value
     };
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwMZ9fwoP4S7P5X11yjqfU_j9taY4p43euO0kQ2lp9RfuGxXzB4aAEfLsZ1TClbR2ypqg/exec"; // Replace with your Apps Script URL
-
-    try {
-        const response = await fetch(scriptURL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
-        });
-
-        const result = await response.json();
-        if (result.status === "success") {
-            alert("Message sent successfully!");
-            document.getElementById("contactForm").reset();
-        } else {
-            alert("Error: " + result.message);
-        }
-    } catch (error) {
-        alert("Failed to send message: " + error);
-    }
+    fetch("https://script.google.com/macros/s/AKfycbwMZ9fwoP4S7P5X11yjqfU_j9taY4p43euO0kQ2lp9RfuGxXzB4aAEfLsZ1TClbR2ypqg/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+        mode: "cors" // 🚀 Important for CORS handling
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Message Sent Successfully!");
+    })
+    .catch(error => console.error("Error:", error));
 });
 
 
+
 //https://script.google.com/macros/s/AKfycbwz-8nRZom_VFYQYUb0uIoyHDpStowBPicJVsQKYYyUFLl-AayLaxvYveIGEajvD67FnA/exec
+
+//https://script.google.com/macros/s/AKfycbwMZ9fwoP4S7P5X11yjqfU_j9taY4p43euO0kQ2lp9RfuGxXzB4aAEfLsZ1TClbR2ypqg/exec
 
 
