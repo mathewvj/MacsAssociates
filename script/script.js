@@ -101,6 +101,10 @@ document.addEventListener('DOMContentLoaded', setActiveLink);
 document.getElementById("contactForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const submitButton = document.getElementById("submitButton");
+    submitButton.disabled = true;
+    submitButton.innerHTML = `<span class="spinner-border spinner-border-sm"></span> Sending...`;
+
     const formData = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -112,19 +116,31 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-        mode: "cors" // 🚀 Important for CORS handling
+        mode: "no-cors" 
     })
-    .then(response => response.json())
-    .then(data => {
-        alert("Message Sent Successfully!");
+    .then(() => {
+        Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Your message has been successfully submitted.",
+            confirmButtonColor: "#3085d6"
+        });
+        document.getElementById("contactForm").reset();
     })
-    .catch(error => console.error("Error:", error));
-});
+    .catch(error => {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong! Please try again.",
+            confirmButtonColor: "#d33"
+        });
+        console.error("Error:", error);
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+        submitButton.innerHTML = "Submit";
+    });
 
-
-
-//https://script.google.com/macros/s/AKfycbwz-8nRZom_VFYQYUb0uIoyHDpStowBPicJVsQKYYyUFLl-AayLaxvYveIGEajvD67FnA/exec
-
-//https://script.google.com/macros/s/AKfycbwMZ9fwoP4S7P5X11yjqfU_j9taY4p43euO0kQ2lp9RfuGxXzB4aAEfLsZ1TClbR2ypqg/exec
+})
 
 
