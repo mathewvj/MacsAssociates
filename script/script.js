@@ -109,7 +109,7 @@ document.querySelector("form").addEventListener("submit", async function (e) {
     };
 
     try {
-        const response = await fetch("https://script.google.com/macros/library/d/15Se2EtAO57fpmD4UZUkV0c0RAtn8ecGR7pXHJPTIeqFxpHqbquYKxVhP/11S_ckOA/exec", {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbzVpeFKCvNGHc4CfAOPqHTH-v8v1vSH-qSvtawJ91bbvUPEBd_wydNCR7jVAJPvxybQDA/exec", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
