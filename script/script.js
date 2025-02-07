@@ -98,20 +98,21 @@ document.addEventListener('DOMContentLoaded', setActiveLink);
 
 
 //form submission
-document.querySelector("form").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    
     const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      message: document.getElementById("message").value
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
     };
 
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwMZ9fwoP4S7P5X11yjqfU_j9taY4p43euO0kQ2lp9RfuGxXzB4aAEfLsZ1TClbR2ypqg/exec"; // Replace with your Apps Script URL
+
     try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbzVpeFKCvNGHc4CfAOPqHTH-v8v1vSH-qSvtawJ91bbvUPEBd_wydNCR7jVAJPvxybQDA/exec", {
+        const response = await fetch(scriptURL, {
             method: "POST",
-            mode: "no-cors",  
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
         });
@@ -119,16 +120,16 @@ document.querySelector("form").addEventListener("submit", async function (e) {
         const result = await response.json();
         if (result.status === "success") {
             alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
         } else {
-            alert("Error sending message!");
+            alert("Error: " + result.message);
         }
     } catch (error) {
-        console.error("Error:", error);
-        alert("Failed to connect to the server.");
+        alert("Failed to send message: " + error);
     }
 });
 
 
+//https://script.google.com/macros/s/AKfycbwz-8nRZom_VFYQYUb0uIoyHDpStowBPicJVsQKYYyUFLl-AayLaxvYveIGEajvD67FnA/exec
 
 
-//https://script.google.com/macros/s/AKfycbzVpeFKCvNGHc4CfAOPqHTH-v8v1vSH-qSvtawJ91bbvUPEBd_wydNCR7jVAJPvxybQDA/exec
