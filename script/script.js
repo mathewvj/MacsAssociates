@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', setActiveLink);
 //form submission
 document.querySelector("form").addEventListener("submit", async function (e) {
     e.preventDefault();
-    
+
     const formData = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
@@ -109,7 +109,7 @@ document.querySelector("form").addEventListener("submit", async function (e) {
     };
 
     try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbxuQRL7M0UO0wNl_9kjuUHaBxF3DVULD8nTLA0Gz7O8zVeTHF2KQgIJ3At55Rr1S_ckOA/exec", {
+        const response = await fetch("https://script.google.com/macros/library/d/15Se2EtAO57fpmD4UZUkV0c0RAtn8ecGR7pXHJPTIeqFxpHqbquYKxVhP/11S_ckOA/exec", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
