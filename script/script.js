@@ -111,6 +111,7 @@ document.querySelector("form").addEventListener("submit", async function (e) {
     try {
         const response = await fetch("https://script.google.com/macros/s/AKfycbzVpeFKCvNGHc4CfAOPqHTH-v8v1vSH-qSvtawJ91bbvUPEBd_wydNCR7jVAJPvxybQDA/exec", {
             method: "POST",
+            mode: "no-cors",  
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
         });
@@ -126,3 +127,8 @@ document.querySelector("form").addEventListener("submit", async function (e) {
         alert("Failed to connect to the server.");
     }
 });
+
+
+
+
+//https://script.google.com/macros/s/AKfycbzVpeFKCvNGHc4CfAOPqHTH-v8v1vSH-qSvtawJ91bbvUPEBd_wydNCR7jVAJPvxybQDA/exec
