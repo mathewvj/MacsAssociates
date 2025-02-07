@@ -224,11 +224,25 @@ body {
     }
 }
   
-  .about-section img {
-    max-width: 100%;
-    height: auto;
+.about-img {
+  width: 100%; 
+  max-width: 500px; 
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333; 
+}
+
+/* On small screens, center-align text */
+@media (max-width: 768px) {
+  .about-text {
+      text-align: center;
   }
-  
+}
   .services-section {
     background-color: #f8f9fa;
     padding: 60px 0;
@@ -264,6 +278,28 @@ body {
     margin-bottom: 15px;
     color: #3498db;
     font-size: 40px;
+}
+
+.view-more {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.655);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.view-more i {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.view-more:hover {
+  color: rgb(245, 162, 7); /
 }
   
 .contact-section {
