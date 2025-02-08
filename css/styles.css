@@ -28,12 +28,21 @@ body {
   .macs-font {
     font-weight: 600;
     font-style: normal;
+    font-size: 1.5rem;
     color: rgb(238, 162, 21);
     
   }
+  .macs-font span{
+    color: rgba(18, 50, 168, 0.867);
+  }
+
   .adjust-strong {
     position: relative;
     top: 5px; 
+  }
+  .navbar-logo{
+    height: 3rem;
+    width: 3rem;
   }
 
   @media (min-width: 992px) {
@@ -112,7 +121,12 @@ body {
     }
     .navbar-collapse {
       background-color: #ffffffbc;
+    }
+    .navbar-nav .nav-item .nav-link.active::after {
+      width: 0;
+      left: 0; 
   }
+  
   }
   
   .hero-section {
@@ -247,6 +261,9 @@ body {
     background-color: #f8f9fa;
     padding: 60px 0;
 }
+.services-section a{
+  text-decoration: none;
+}
 .services-section .card {
     border: none;
     border-radius: 10px;
@@ -302,6 +319,116 @@ body {
   color: rgb(245, 162, 7); /
 }
   
+.faq-section {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+.faq-title {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.accordion-item {
+  border: none;
+  margin-bottom: 16px;
+  border-radius: 10px !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.accordion-button {
+  border-radius: 10px !important;
+  background-color: white;
+  color: #333;
+  font-weight: 600;
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #ffffff;
+  color: #333;
+  box-shadow: none;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0,0,0,.125);
+}
+
+.accordion-button::after {
+  background-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) ;
+}
+
+.accordion-body {
+  padding: 25px 30px;
+  background-color: white;
+  color: #424242;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.check-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.check-list li:last-child {
+  margin-bottom: 0;
+}
+
+.check-list li:before {
+  content: '✓';
+  color: #0e08c5;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+      padding: 40px 0;
+  }
+  
+  .accordion-button {
+      padding: 15px 20px;
+      font-size: 1rem;
+  }
+  
+  .accordion-body {
+      padding: 20px;
+      font-size: 1rem;
+  }
+}
 .contact-section {
   background-color: #f8f9fa;
   padding: 60px 0;
@@ -344,8 +471,8 @@ body {
 .btn-primary {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #2335bb;
+    border-color: #2335bb;
 }
 .btn-primary:hover {
     background-color: #0056b3;
