@@ -1,370 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Company incorporation services</title>
-    <link rel="icon" href="../assets/images/MACS11.webp " type="image/png">
-    <link rel="apple-touch-icon" href="../assets/images/MACS11.webp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company incorporation services</title>
+    <link rel="icon" href="../assets/images/MACS11.webp " type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/images/MACS11.webp" />
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        body {
-            background-color: #f4f6f9;
-            font-family: "Barlow Condensed", serif;  
+      body {
+        background-color: #f4f6f9;
+        font-family: "Barlow Condensed", serif;
+      }
+
+      .macs-font {
+        font-weight: 600;
+        font-style: normal;
+        color: rgb(238, 162, 21);
+      }
+      .adjust-strong {
+        position: relative;
+        top: 5px;
+      }
+
+      @media (min-width: 992px) {
+        .navbar-logo {
+          height: 4rem !important;
+          width: 4rem !important;
         }
 
-        .macs-font {
-            font-weight: 600;
-            font-style: normal;
-            color: rgb(238, 162, 21);
-            
-        }
         .adjust-strong {
-            position: relative;
-            top: 5px; 
+          font-size: 2rem !important;
         }
+      }
 
-        @media (min-width: 992px) {
-            .navbar-logo {
-            height: 4rem !important;
-            width: 4rem !important;
-            }
-        
-            .adjust-strong {
-            font-size: 2rem !important;
-            }
-        }
+      .navbar {
+        height: 4.5rem;
+      }
 
-        .navbar{
-            height: 4.5rem;
-            
-        }
-        
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('../assets/images/incorporate.webp');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-            margin-bottom: 50px;
-            margin-top: 4.5rem; 
-        }
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("../assets/images/incorporate.webp");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        margin-bottom: 50px;
+        margin-top: 4.5rem;
+      }
 
-        .hero-title {
-            font-size: 3.2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+      .hero-title {
+        font-size: 3.2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
 
-        .main-section {
-            padding: 40px 0;
-            background-color: #f8f9fa;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+      .main-section {
+        padding: 40px 0;
+        background-color: #f8f9fa;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
-        .main-heading {
-            color: #0d6efd;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #0d6efd;
-            display: inline-block;
-        }
+      .main-heading {
+        color: #0d6efd;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #0d6efd;
+        display: inline-block;
+      }
 
-        .sub-section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
+      .sub-section {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
 
-        .sub-section:hover {
-            transform: translateY(-5px);
-        }
+      .sub-section:hover {
+        transform: translateY(-5px);
+      }
 
-        .sub-heading {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e9ecef;
-        }
+      .sub-heading {
+        color: #2c3e50;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e9ecef;
+      }
 
-        .service-item {
-            margin-bottom: 25px;
-            padding-left: 20px;
-            border-left: 3px solid rgb(245, 162, 7);
-        }
+      .service-item {
+        margin-bottom: 25px;
+        padding-left: 20px;
+        border-left: 3px solid rgb(245, 162, 7);
+      }
 
-        .service-title {
-            color: #2335bb;
-            font-size: 1.4rem;
-            margin-bottom: 8px;
-        }
+      .service-title {
+        color: #2335bb;
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+      }
 
-        .service-description {
-            color: #31393f;
-            font-size: 1rem;
-            line-height: 1.6;
+      .service-description {
+        color: #31393f;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      .contact-section {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+      }
+      .contact-heading {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .contact-heading h2 {
+        font-weight: 700;
+        color: #333;
+      }
+      .contact-heading p {
+        font-size: 18px;
+        color: #666;
+      }
+      .contact-info,
+      .contact-form {
+        background-color: white;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .contact-info {
+        margin-bottom: 30px;
+      }
+      .contact-info p {
+        font-size: 18px;
+      }
+      .contact-info h4,
+      .contact-form h4 {
+        color: #343a40;
+        margin-bottom: 20px;
+      }
+      .contact-info p {
+        margin-bottom: 10px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .btn-primary {
+        width: 100%;
+        padding: 10px;
+        background-color: #2335bb;
+        border-color: #2335bb;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      @media (min-width: 768px) {
+        .contact-section .row {
+          display: flex;
+          align-items: stretch;
         }
+        .contact-info,
+        .contact-form {
+          height: 100%;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <img src="../assets/images/MACS11.webp" style="height: 3rem; width: 3rem;" alt="MACS Associates Logo" class="navbar-logo">
-                <strong class="macs-font adjust-strong" style="font-size: 1.5rem;">MACS <span style="color: rgba(18, 50, 168, 0.867);">ASSOCIATES</span></strong>
-            </a>
-        </div>
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <img
+            src="../assets/images/MACS11.webp"
+            style="height: 3rem; width: 3rem"
+            alt="MACS Associates Logo"
+            class="navbar-logo"
+          />
+          <strong class="macs-font adjust-strong" style="font-size: 1.5rem"
+            >MACS
+            <span style="color: rgba(18, 50, 168, 0.867)"
+              >ASSOCIATES</span
+            ></strong
+          >
+        </a>
+      </div>
     </nav>
     <!-- Hero Section with Background Image -->
     <div class="hero-section">
-        <div class="container text-center">
-            <h1 class="hero-title">Company incorporation services</h1>
-        </div>
+      <div class="container text-center">
+        <h1 class="hero-title">Company incorporation services</h1>
+      </div>
     </div>
 
     <div class="container">
-        <!-- Financial Services Section -->
-        <section class="main-section">
-            <div class="container">
-                <!-- <h2 class="main-heading">Financial Services</h2> -->
-                
-                <div class="row g-4 align-items-stretch">
-                    <!-- VAT Registration & Deregistration -->
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading">Business Consultation & Advisory</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Choosing the right business structure (Mainland, Free Zone, or Offshore)</h4>
-                                <p class="service-description">Helping businesses select the appropriate structure (Mainland, Free Zone, or Offshore) based on operational needs, legal requirements, and market access.</p>
-                            </div>
+      <!-- Financial Services Section -->
+      <section class="main-section">
+        <div class="container">
+          <!-- <h2 class="main-heading">Financial Services</h2> -->
 
-                            <div class="service-item">
-                                <h4 class="service-title">Advising on the most suitable free zone based on business activity</h4>
-                                <p class="service-description"> Recommending the best Free Zone for business activities, considering factors like tax benefits, ease of setup, and industry-specific requirements.</p>
-                            </div>
+          <div class="row g-4 align-items-stretch">
+            <!-- VAT Registration & Deregistration -->
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">Business Consultation & Advisory</h3>
 
-                            <div class="service-item">
-                                <h4 class="service-title">Understanding UAE business regulations and compliance requirements</h4>
-                                <p class="service-description">Guiding businesses through UAE's legal framework to ensure compliance with local laws, licensing, and regulatory obligations for smooth operations.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading">Business Licensing & Registration</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Reserving the company name with the Department of Economic Development (DED) or Free Zone Authority</h4>
-                                <p class="service-description">Helping businesses secure a unique company name by applying with the DED or relevant Free Zone Authority, ensuring it meets local regulations.</p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Obtaining initial approvals and trade licenses</h4>
-                                <p class="service-description">Assisting in obtaining the necessary initial approvals and trade licenses from relevant authorities to legally operate in the UAE.</p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Assisting with professional, commercial, and industrial licenses</h4>
-                                <p class="service-description">Providing guidance and support to businesses in obtaining the appropriate licenses, whether professional, commercial, or industrial, based on their business activity and structure.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading">Legal Documentation & Approvals</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Drafting and notarization of Memorandum of Association (MOA) and Articles of Association (AOA)</h4>
-                                <p class="service-description"> Assisting businesses in drafting and notarizing the MOA and AOA, which outline the company’s structure, objectives, and operational guidelines.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Obtaining approvals from relevant government authorities</h4>
-                                <p class="service-description">Securing the necessary approvals from government entities like the Ministry of Economy, DED, or Municipality to ensure the business complies with UAE regulations.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Assistance with shareholder agreements and power of attorney</h4>
-                                <p class="service-description">Providing support in drafting shareholder agreements and power of attorney documents to formalize ownership rights and appoint representatives.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading">PRO & Government Liaison Services</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Visa processing for shareholders, employees, and dependents</h4>
-                                <p class="service-description">Assisting with the application and processing of visas for shareholders, employees, and their dependents to enable legal residency and employment in the UAE.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Emirates ID registration and medical tests</h4>
-                                <p class="service-description">Supporting the registration of Emirates IDs and arranging medical tests required for obtaining residency and work permits.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Company establishment card and labor file registration</h4>
-                                <p class="service-description">Facilitating the registration of the company's establishment card and labor file with the Ministry of Human Resources and Emiratisation (MOHRE) to comply with UAE labor laws.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Assistance with Ejari (office lease registration)</h4>
-                                <p class="service-description"> Helping businesses with the registration of their office lease (Ejari) to comply with the legal requirement for operating in the UAE.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading"> Bank Account Opening Assistance</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Guidance on choosing the right bank for business needs</h4>
-                                <p class="service-description"> Advising businesses on selecting the most suitable bank based on their specific needs, such as services, fees, and ease of international transactions.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Preparation of required documentation for corporate bank account opening</h4>
-                                <p class="service-description">Assisting with the preparation of all necessary documents required to open a corporate bank account, ensuring smooth processing.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Coordination with banks for account approvals</h4>
-                                <p class="service-description">  Coordinating with banks to ensure timely approval and activation of corporate accounts, facilitating business operations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading">Office Setup & Business Address Solutions</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Assistance with renting or leasing office space</h4>
-                                <p class="service-description">Helping businesses find and secure the most suitable office space, whether virtual, shared, or physical, based on their operational needs.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Ejari registration for mainland businesses</h4>
-                                <p class="service-description">Assisting mainland businesses with the registration of their office lease through Ejari to comply with local regulations.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Compliance with office requirements for licensing</h4>
-                                <p class="service-description"> Ensuring that the leased office space meets the necessary legal and regulatory requirements for licensing and business operations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading">VAT & Tax Registration</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Registration for Value Added Tax (VAT) with the Federal Tax Authority (FTA)</h4>
-                                <p class="service-description">Assisting businesses with the registration process for VAT with the FTA, ensuring compliance with UAE tax laws.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Corporate tax registration (if applicable)</h4>
-                                <p class="service-description">Helping businesses navigate corporate tax registration, if applicable, and ensuring they meet local tax requirements.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Assistance with bookkeeping and accounting compliance</h4>
-                                <p class="service-description">Providing support for maintaining accurate financial records and ensuring compliance with UAE accounting standards and regulations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading">Business Support Services</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Trademark registration and brand protection</h4>
-                                <p class="service-description">Assisting businesses with registering trademarks to protect their brand identity and prevent unauthorized use in the UAE and beyond.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Assistance with customs registration</h4>
-                                <p class="service-description">Helping import/export businesses register with UAE customs authorities to ensure compliance with regulations and smooth cross-border trade.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Compliance with UAE economic substance regulations</h4>
-                                <p class="service-description">Guiding businesses through the UAE's economic substance regulations to ensure they meet the requirements for conducting business activities in the country.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="sub-section h-100 d-flex flex-column">
-                            <h3 class="sub-heading">Ongoing Compliance & Renewals</h3>
-                            
-                            <div class="service-item">
-                                <h4 class="service-title">Trade license renewal and amendments</h4>
-                                <p class="service-description">Assisting businesses with the timely renewal of their trade licenses and making any necessary amendments to keep their operations compliant with UAE regulations.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Annual reporting and regulatory compliance</h4>
-                                <p class="service-description">Ensuring businesses meet annual reporting requirements and comply with ongoing regulatory obligations to maintain legal standing.
-                                </p>
-                            </div>
-
-                            <div class="service-item">
-                                <h4 class="service-title">Employee visa renewals and labor contract modifications</h4>
-                                <p class="service-description">Managing employee visa renewals and making updates to labor contracts in line with UAE laws and company policies.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Choosing the right business structure (Mainland, Free Zone,
+                    or Offshore)
+                  </h4>
+                  <p class="service-description">
+                    Helping businesses select the appropriate structure
+                    (Mainland, Free Zone, or Offshore) based on operational
+                    needs, legal requirements, and market access.
+                  </p>
                 </div>
-            </div>
-        </section>
 
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Advising on the most suitable free zone based on business
+                    activity
+                  </h4>
+                  <p class="service-description">
+                    Recommending the best Free Zone for business activities,
+                    considering factors like tax benefits, ease of setup, and
+                    industry-specific requirements.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Understanding UAE business regulations and compliance
+                    requirements
+                  </h4>
+                  <p class="service-description">
+                    Guiding businesses through UAE's legal framework to ensure
+                    compliance with local laws, licensing, and regulatory
+                    obligations for smooth operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">Business Licensing & Registration</h3>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Reserving the company name with the Department of Economic
+                    Development (DED) or Free Zone Authority
+                  </h4>
+                  <p class="service-description">
+                    Helping businesses secure a unique company name by applying
+                    with the DED or relevant Free Zone Authority, ensuring it
+                    meets local regulations.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Obtaining initial approvals and trade licenses
+                  </h4>
+                  <p class="service-description">
+                    Assisting in obtaining the necessary initial approvals and
+                    trade licenses from relevant authorities to legally operate
+                    in the UAE.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Assisting with professional, commercial, and industrial
+                    licenses
+                  </h4>
+                  <p class="service-description">
+                    Providing guidance and support to businesses in obtaining
+                    the appropriate licenses, whether professional, commercial,
+                    or industrial, based on their business activity and
+                    structure.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">Legal Documentation & Approvals</h3>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Drafting and notarization of Memorandum of Association (MOA)
+                    and Articles of Association (AOA)
+                  </h4>
+                  <p class="service-description">
+                    Assisting businesses in drafting and notarizing the MOA and
+                    AOA, which outline the company’s structure, objectives, and
+                    operational guidelines.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Obtaining approvals from relevant government authorities
+                  </h4>
+                  <p class="service-description">
+                    Securing the necessary approvals from government entities
+                    like the Ministry of Economy, DED, or Municipality to ensure
+                    the business complies with UAE regulations.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Assistance with shareholder agreements and power of attorney
+                  </h4>
+                  <p class="service-description">
+                    Providing support in drafting shareholder agreements and
+                    power of attorney documents to formalize ownership rights
+                    and appoint representatives.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">PRO & Government Liaison Services</h3>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Visa processing for shareholders, employees, and dependents
+                  </h4>
+                  <p class="service-description">
+                    Assisting with the application and processing of visas for
+                    shareholders, employees, and their dependents to enable
+                    legal residency and employment in the UAE.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Emirates ID registration and medical tests
+                  </h4>
+                  <p class="service-description">
+                    Supporting the registration of Emirates IDs and arranging
+                    medical tests required for obtaining residency and work
+                    permits.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Company establishment card and labor file registration
+                  </h4>
+                  <p class="service-description">
+                    Facilitating the registration of the company's establishment
+                    card and labor file with the Ministry of Human Resources and
+                    Emiratisation (MOHRE) to comply with UAE labor laws.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Assistance with Ejari (office lease registration)
+                  </h4>
+                  <p class="service-description">
+                    Helping businesses with the registration of their office
+                    lease (Ejari) to comply with the legal requirement for
+                    operating in the UAE.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">Bank Account Opening Assistance</h3>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Guidance on choosing the right bank for business needs
+                  </h4>
+                  <p class="service-description">
+                    Advising businesses on selecting the most suitable bank
+                    based on their specific needs, such as services, fees, and
+                    ease of international transactions.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Preparation of required documentation for corporate bank
+                    account opening
+                  </h4>
+                  <p class="service-description">
+                    Assisting with the preparation of all necessary documents
+                    required to open a corporate bank account, ensuring smooth
+                    processing.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Coordination with banks for account approvals
+                  </h4>
+                  <p class="service-description">
+                    Coordinating with banks to ensure timely approval and
+                    activation of corporate accounts, facilitating business
+                    operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">
+                  Office Setup & Business Address Solutions
+                </h3>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Assistance with renting or leasing office space
+                  </h4>
+                  <p class="service-description">
+                    Helping businesses find and secure the most suitable office
+                    space, whether virtual, shared, or physical, based on their
+                    operational needs.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Ejari registration for mainland businesses
+                  </h4>
+                  <p class="service-description">
+                    Assisting mainland businesses with the registration of their
+                    office lease through Ejari to comply with local regulations.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Compliance with office requirements for licensing
+                  </h4>
+                  <p class="service-description">
+                    Ensuring that the leased office space meets the necessary
+                    legal and regulatory requirements for licensing and business
+                    operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">VAT & Tax Registration</h3>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Registration for Value Added Tax (VAT) with the Federal Tax
+                    Authority (FTA)
+                  </h4>
+                  <p class="service-description">
+                    Assisting businesses with the registration process for VAT
+                    with the FTA, ensuring compliance with UAE tax laws.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Corporate tax registration (if applicable)
+                  </h4>
+                  <p class="service-description">
+                    Helping businesses navigate corporate tax registration, if
+                    applicable, and ensuring they meet local tax requirements.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Assistance with bookkeeping and accounting compliance
+                  </h4>
+                  <p class="service-description">
+                    Providing support for maintaining accurate financial records
+                    and ensuring compliance with UAE accounting standards and
+                    regulations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">Business Support Services</h3>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Trademark registration and brand protection
+                  </h4>
+                  <p class="service-description">
+                    Assisting businesses with registering trademarks to protect
+                    their brand identity and prevent unauthorized use in the UAE
+                    and beyond.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Assistance with customs registration
+                  </h4>
+                  <p class="service-description">
+                    Helping import/export businesses register with UAE customs
+                    authorities to ensure compliance with regulations and smooth
+                    cross-border trade.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Compliance with UAE economic substance regulations
+                  </h4>
+                  <p class="service-description">
+                    Guiding businesses through the UAE's economic substance
+                    regulations to ensure they meet the requirements for
+                    conducting business activities in the country.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="sub-section h-100 d-flex flex-column">
+                <h3 class="sub-heading">Ongoing Compliance & Renewals</h3>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Trade license renewal and amendments
+                  </h4>
+                  <p class="service-description">
+                    Assisting businesses with the timely renewal of their trade
+                    licenses and making any necessary amendments to keep their
+                    operations compliant with UAE regulations.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Annual reporting and regulatory compliance
+                  </h4>
+                  <p class="service-description">
+                    Ensuring businesses meet annual reporting requirements and
+                    comply with ongoing regulatory obligations to maintain legal
+                    standing.
+                  </p>
+                </div>
+
+                <div class="service-item">
+                  <h4 class="service-title">
+                    Employee visa renewals and labor contract modifications
+                  </h4>
+                  <p class="service-description">
+                    Managing employee visa renewals and making updates to labor
+                    contracts in line with UAE laws and company policies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-</body>
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="contact-heading">
+            <h2>Contact Us</h2>
+            <p>
+              We're here to help! Reach out to us for any inquiries or
+              assistance.
+            </p>
+          </div>
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="contact-info h-100">
+              <h4 class="mb-4">Contact Information</h4>
+              <p class="p-2">
+                <i class="fas fa-phone me-2 text-primary"></i> +971 563123506
+                (UAE) , +91 8129172677 (IND)
+              </p>
+              <p class="p-2">
+                <i class="fas fa-envelope me-2 text-primary"></i>
+                info@macsassociates.com
+              </p>
+              <!-- <p class="p-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i> 123 Accounting Street, Financial City, FC 12345, USA</p> -->
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-form h-100">
+              <h4 class="mb-4">Send Us a Message</h4>
+              <form id="contactForm">
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Your Phone Number"
+                    required
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <select class="form-control text-muted" id="service" required>
+                    <option value="" disabled selected class="text-muted">
+                      Select a Service
+                    </option>
+                    <option value="accounting&bookkeeping">
+                      Accounting & Bookkeeping
+                    </option>
+                    <option value="statutory&internalauditors">
+                      Statutory & Internal Auditors
+                    </option>
+                    <option value="vatservices">
+                      VAT related services in UAE
+                    </option>
+                    <option value="corporatetax">
+                      Corporate Tax Services in UAE
+                    </option>
+                    <option value="esrregulationservices">
+                      ESR regulations services
+                    </option>
+                    <option value="payrollmanagement">
+                      Payroll management
+                    </option>
+                    <option value="companyincorporation">
+                      Company Incorporation services
+                    </option>
+                    <option value="corporateTraining&advisory">
+                      Corporate Training & Advisory Services
+                    </option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+                <div class="form-group mb-3">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitButton">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- Social Media Icons -->
+          <div class="col-12 mt-4">
+            <div class="social-links text-center">
+              <h4 class="mb-3">Follow Us</h4>
+              <a
+                href="https://www.facebook.com/share/12CHwgoZGKc/?mibextid=wwXIfr"
+                class="text-primary mx-2 fs-4"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/macs_associates?igsh=MjNia3U5MGtiMnZh&utm_source=qr"
+                class="text-primary mx-2 fs-4"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-primary mx-2 fs-4"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@MACSAssociatesdxb"
+                class="text-primary mx-2 fs-4"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <div class="mb-4">
+          <a href="/index.html#home" class="text-white mx-3">Home</a>
+          <a href="/index.html#about" class="text-white mx-3">About</a>
+          <a href="/index.html#services" class="text-white mx-3"
+            >Our Services</a
+          >
+          <a href="/index.html#faq" class="text-white mx-3">FAQs</a>
+          <a href="/index.html#contact" class="text-white mx-3">Contact Us</a>
+        </div>
+        <p>&copy; 2025 MACS Associates. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="../script/script.js" defer></script>
+  </body>
 </html>
