@@ -118,80 +118,85 @@ section {
     left: 0;
   }
 }
-
+/* HERO SECTION */
 .hero-section {
   margin-top: 4.5rem;
-  background-image: url("../assets/images/HOME2.webp") ;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../assets/images/HOME2.webp") no-repeat center center/cover;
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding-right: 5rem;
+  padding: 3rem 1rem;
 }
 
+/* Background Overlay for Readability */
 .hero-section::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0);
+  inset: 0; /* Shortcut for top, right, bottom, left */
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
   z-index: 1;
 }
 
+/* Hero Content */
 .hero-content {
   position: relative;
   z-index: 2;
-  background-color: #00000083;
-  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 15px;
   padding: 2rem;
-  color: white;
+  max-width: 100%;
 }
 
-/* Hero title styling */
+/* HERO TITLE */
 .hero-title {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Scales with screen size */
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
+  color: white;
 }
 
-/* Hero subtitle styling */
+/* HERO SUBTITLE */
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   font-weight: 400;
   margin-bottom: 2rem;
+  color: white;
 }
 
-.hero-title,
-.hero-subtitle,
+/* HERO BUTTON */
 .btn-hero {
-  font-family: "Barlow Condensed", serif;
-}
-
-/* Hero button styling */
-.btn-hero {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 8px;
-  background-color: rgb(245, 162, 7);
+  background: rgb(245, 162, 7);
   color: white;
   border: none;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-hero:hover {
-  background-color: #2335bb;
+  background: #2335bb;
+  transform: scale(1.05);
 }
 
-/* Animation for fade-in effect */
+/* FADE-IN ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
@@ -205,30 +210,40 @@ section {
   animation-delay: 1s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .hero-content {
+    max-width: 100%;
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .btn-hero {
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-hero {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
 }
 
