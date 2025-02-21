@@ -2,20 +2,57 @@ body {
   margin: 0;
   font-family: "Barlow Condensed", serif;
 }
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc; 
+  border-top: 5px solid #f5a207; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite, colorChange 1s infinite;
+}
+
+/* Rotation Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Alternating Color Animation */
+@keyframes colorChange {
+  0% { border-top-color: #f5a207; } 
+  50% { border-top-color: #2335bb; } 
+  100% { border-top-color: #f5a207; } 
+}
+
 section {
   scroll-margin-top: 4.5rem;
 }
 
 .custom-toggler {
-  background-color: transparent; 
-  border: none; 
-  outline: none; 
-  padding: 8px 12px; 
-  transition: all 0.3s ease-in-out; 
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  transition: all 0.3s ease-in-out;
 }
 
 .custom-toggler:focus {
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 .navbar-toggle-icon,
@@ -93,17 +130,14 @@ section {
   left: 0;
 }
 
-
 .navbar-nav .nav-item .nav-link.active {
-  color: rgb(238, 162, 21); 
+  color: rgb(238, 162, 21);
 }
-
 
 .navbar-nav .nav-item .nav-link.active::after {
-  width: 100%; 
+  width: 100%;
   left: 0;
 }
-
 
 @media (max-width: 992px) {
   .navbar-nav .nav-item .nav-link:hover::after {
@@ -135,8 +169,7 @@ section {
 .hero-section::before {
   content: "";
   position: absolute;
-  inset: 0; /* Shortcut for top, right, bottom, left */
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  inset: 0;
   z-index: 1;
 }
 
@@ -144,7 +177,7 @@ section {
 .hero-content {
   position: relative;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   padding: 2rem;
   max-width: 100%;
@@ -152,7 +185,7 @@ section {
 
 /* HERO TITLE */
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Scales with screen size */
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -183,6 +216,7 @@ section {
 .btn-hero:hover {
   background: #2335bb;
   transform: scale(1.05);
+  color: white;
 }
 
 /* FADE-IN ANIMATION */
@@ -441,6 +475,10 @@ section {
 .contact-section {
   background-color: #f8f9fa;
   padding: 60px 0;
+}
+
+.social-links a{
+  text-decoration: none;
 }
 .contact-heading {
   text-align: center;
