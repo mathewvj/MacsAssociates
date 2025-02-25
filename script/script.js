@@ -143,8 +143,8 @@ document
       .then(() => {
         Swal.fire({
           icon: "success",
-          title: "Message Sent!",
-          text: "Your message has been successfully submitted.",
+          title: "Message Submitted!",
+          text: "Our team will reach out to you shortly",
           confirmButtonColor: "#3085d6",
         });
         document.getElementById("contactForm").reset();
