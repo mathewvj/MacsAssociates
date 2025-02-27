@@ -12,15 +12,6 @@ window.addEventListener("load", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  AOS.init({
-    once: true,
-    offset: 100,
-    duration: 800,
-    easing: "ease-in-out",
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector("#navbarNav");
   const toggleIcon = document.querySelector(".bi-list");
