@@ -20,6 +20,20 @@
       rel="stylesheet"
     />
 
+    <!-- Google Tag Manager -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7EGF8W481K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-7EGF8W481K");
+    </script>
+
     <style>
       body {
         background-color: #f4f6f9;
@@ -41,29 +55,43 @@
       .spinner {
         width: 50px;
         height: 50px;
-        border: 5px solid #ccc; 
-        border-top: 5px solid #f5a207; 
+        border: 5px solid #ccc;
+        border-top: 5px solid #f5a207;
         border-radius: 50%;
         animation: spin 1s linear infinite, colorChange 1s infinite;
       }
 
       @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
 
       @keyframes colorChange {
-        0% { border-top-color: #f5a207; } 
-        50% { border-top-color: #2335bb; } 
-        100% { border-top-color: #f5a207; } 
+        0% {
+          border-top-color: #f5a207;
+        }
+        50% {
+          border-top-color: #2335bb;
+        }
+        100% {
+          border-top-color: #f5a207;
+        }
       }
-
 
       .macs-font {
         font-weight: 600;
         font-style: normal;
+        font-size: 1.5rem;
         color: rgb(238, 162, 21);
       }
+      .macs-font span {
+        color: rgba(18, 50, 168, 0.867);
+      }
+
       .adjust-strong {
         position: relative;
         top: 5px;
@@ -218,17 +246,64 @@
           height: 100%;
         }
       }
+      .footer {
+        background-color: #181616b9;
+        text-align: center;
+      }
+
+      .footer .macs-font {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .footer .img-fluid {
+        max-width: 80px;
+      }
+
+      .footer h5 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+
+      .footer ul {
+        padding: 0;
+      }
+
+      .footer ul li {
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .footer .row {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer .col-md-3,
+        .footer .col-md-5,
+        .footer .col-md-4 {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .footer .img-fluid {
+          margin-bottom: 10px;
+        }
+
+        .footer hr {
+          margin: 15px 0;
+        }
+      }
     </style>
   </head>
   <body>
-
     <div id="loader">
       <div class="spinner"></div>
     </div>
 
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
+        <a class="navbar-brand fw-bold" href="/">
           <img
             src="../assets/images/MACS11.webp"
             style="height: 3rem; width: 3rem"
@@ -236,10 +311,7 @@
             class="navbar-logo"
           />
           <strong class="macs-font adjust-strong" style="font-size: 1.5rem"
-            >MACS
-            <span style="color: rgba(18, 50, 168, 0.867)"
-              >ASSOCIATES</span
-            ></strong
+            >MACS <span>ASSOCIATES</span></strong
           >
         </a>
       </div>
@@ -580,6 +652,10 @@
                     placeholder="Your Name"
                     required
                   />
+                  <small
+                    id="nameError"
+                    class="text-danger error-message"
+                  ></small>
                 </div>
                 <div class="form-group mb-3">
                   <input
@@ -589,6 +665,10 @@
                     placeholder="Your Email"
                     required
                   />
+                  <small
+                    id="emailError"
+                    class="text-danger error-message"
+                  ></small>
                 </div>
                 <div class="form-group mb-3">
                   <input
@@ -598,6 +678,10 @@
                     placeholder="Your Phone Number"
                     required
                   />
+                  <small
+                    id="phoneError"
+                    class="text-danger error-message"
+                  ></small>
                 </div>
                 <div class="form-group mb-3">
                   <select class="form-control text-muted" id="service" required>
@@ -639,6 +723,10 @@
                     placeholder="Your Message"
                     required
                   ></textarea>
+                  <small
+                    id="messageError"
+                    class="text-danger error-message"
+                  ></small>
                 </div>
                 <button type="submit" class="btn btn-primary" id="submitButton">
                   Send Message
@@ -660,7 +748,9 @@
                 class="text-primary mx-2 fs-4"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" class="text-primary mx-2 fs-4"
+              <a
+                href="https://www.linkedin.com/groups/10066820/"
+                class="text-primary mx-2 fs-4"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
               <a
@@ -674,18 +764,76 @@
       </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="footer text-white py-4">
       <div class="container">
-        <div class="mb-4">
-          <a href="/index.html#home" class="text-white mx-3">Home</a>
-          <a href="/index.html#about" class="text-white mx-3">About</a>
-          <a href="/index.html#services" class="text-white mx-3"
-            >Our Services</a
-          >
-          <a href="/index.html#faq" class="text-white mx-3">FAQs</a>
-          <a href="/index.html#contact" class="text-white mx-3">Contact Us</a>
+        <div class="row align-items-center">
+          <!-- Left Side: Logo with Centered Text -->
+          <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+            <img
+              src="/assets/images/MACS11.webp"
+              alt="MACS Associates Logo"
+              class="img-fluid d-block mx-auto"
+              style="max-width: 80px"
+            />
+            <strong class="macs-font d-block text-center"
+              >MACS <span>ASSOCIATES</span></strong
+            >
+          </div>
+
+          <!-- Center: Quick Links -->
+          <div class="col-md-5 text-center text-md-start mb-3 mb-md-0">
+            <h5 class="text-uppercase">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="/#heroSection"
+                  class="text-white text-decoration-none d-block"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#about"
+                  class="text-white text-decoration-none d-block"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#services"
+                  class="text-white text-decoration-none d-block"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a href="/#faq" class="text-white text-decoration-none d-block"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-white text-decoration-none d-block"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Side: Contact Information -->
+          <div class="col-md-4 text-center text-md-start">
+            <h5 class="text-uppercase">Contact Us</h5>
+            <p class="mb-1"><strong>Email:</strong> info@macsassociates.com</p>
+            <p class="mb-1">
+              <strong>Phone:</strong> +971 563123506, +91 8129172677
+            </p>
+          </div>
         </div>
-        <p>&copy; 2025 MACS Associates. All rights reserved.</p>
+
+        <hr class="bg-light" />
+        <p class="text-center mb-0">
+          &copy; 2025 MACS Associates. All rights reserved.
+        </p>
       </div>
     </footer>
 
@@ -694,6 +842,7 @@
       defer
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="../script/script.js" defer></script>
+    <script src="../script/spinner.js" defer></script>
+    <script src="../script/form.js" defer></script>
   </body>
 </html>

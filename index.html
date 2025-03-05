@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="UObQfxv9HDBWZDlJ8YcJRLEGpt8H918WQdqalNuCwtw"
+    />
+
     <title>MACS Associates - Accounting & Audit Services</title>
     <link rel="icon" href="assets/images/MACS11.webp" type="image/png" />
     <link rel="apple-touch-icon" href="assets/images/MACS11.webp" />
@@ -17,7 +22,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
 
-
     <!-- Preconnect to Google Fonts (Optimized) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -30,10 +34,28 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Add to head -->
-    <link rel="preload" href="assets/images/HOME2.webp" as="image" type="image/webp"/>
+    <link
+      rel="preload"
+      href="assets/images/HOME2.webp"
+      as="image"
+      type="image/webp"
+    />
+
+    <!-- Google Tag Manager -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7EGF8W481K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-7EGF8W481K");
+    </script>
   </head>
   <body>
-
     <!-- Loader Component -->
     <div id="loader">
       <div class="spinner"></div>
@@ -54,12 +76,17 @@
           </a>
 
           <!-- Toggler button with dynamic icon -->
-          <button class="navbar-toggler custom-toggler" type="button" id="menuToggle">
-            <i class="bi bi-list"></i> <!-- Menu icon -->
-            <span class="close-icon d-none">X</span> <!-- Close icon -->
+          <button
+            class="navbar-toggler custom-toggler"
+            type="button"
+            id="menuToggle"
+          >
+            <i class="bi bi-list"></i>
+            <!-- Menu icon -->
+            <span class="close-icon d-none">X</span>
+            <!-- Close icon -->
           </button>
 
-          
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
@@ -91,9 +118,7 @@
               Accounting Firm in UAE handling Book Keeping, VAT and Corporate
               Tax
             </p>
-            <a
-              href="#contact"
-              class="btn btn-hero btn-lg fade-in delay-2"
+            <a href="#contact" class="btn btn-hero btn-lg fade-in delay-2"
               >SCHEDULE A CONSULTATION</a
             >
           </div>
@@ -142,7 +167,6 @@
           <h2 class="text-center mb-5 fw-bold">Our Services</h2>
           <div class="row g-4">
             <div class="col-md-3">
-
               <a href="./views/accounting&bookkeeping.html">
                 <div class="card h-100">
                   <div class="card-body text-center">
@@ -227,7 +251,7 @@
           <div class="row g-4 mt-1">
             <div class="col-md-3">
               <a href="./views/ESRservice.html">
-                <div class="card h-100" >
+                <div class="card h-100">
                   <div class="card-body text-center">
                     <div class="icon-wrapper">
                       <i class="bi bi-building-check"></i>
@@ -248,7 +272,7 @@
             </div>
             <div class="col-md-3">
               <a href="./views/payroll.html">
-                <div class="card h-100" >
+                <div class="card h-100">
                   <div class="card-body text-center">
                     <div class="icon-wrapper">
                       <i class="bi bi-cash-coin"></i>
@@ -268,7 +292,7 @@
             </div>
             <div class="col-md-3">
               <a href="./views/incorporationServices.html">
-                <div class="card h-100" >
+                <div class="card h-100">
                   <div class="card-body text-center">
                     <div class="icon-wrapper">
                       <i class="bi bi-buildings"></i>
@@ -287,7 +311,7 @@
             </div>
             <div class="col-md-3">
               <a href="./views/advisoryServices.html">
-                <div class="card h-100" >
+                <div class="card h-100">
                   <div class="card-body text-center">
                     <div class="icon-wrapper">
                       <i class="bi bi-people-fill"></i>
@@ -444,7 +468,7 @@
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#faq6"
-                > 
+                >
                   What industries do you specialize in?
                 </button>
               </h2>
@@ -566,7 +590,7 @@
       <!-- Contact Section -->
 
       <section id="contact" class="contact-section">
-        <div class="container"> 
+        <div class="container">
           <div class="row">
             <div class="contact-heading">
               <h2>Contact Us</h2>
@@ -579,8 +603,8 @@
               <div class="contact-info h-100">
                 <h4 class="mb-4">Contact Information</h4>
                 <p class="p-2">
-                  <i class="bi bi-telephone me-2 text-primary"></i> +971 563123506
-                  (UAE) , +91 8129172677 (IND)
+                  <i class="bi bi-telephone me-2 text-primary"></i> +971
+                  563123506 (UAE) , +91 8129172677 (IND)
                 </p>
                 <p class="p-2">
                   <i class="bi bi-envelope me-2 text-primary fs-5"></i>
@@ -601,6 +625,10 @@
                       placeholder="Your Name"
                       required
                     />
+                    <small
+                      id="nameError"
+                      class="text-danger error-message"
+                    ></small>
                   </div>
                   <div class="form-group mb-3">
                     <input
@@ -610,6 +638,10 @@
                       placeholder="Your Email"
                       required
                     />
+                    <small
+                      id="emailError"
+                      class="text-danger error-message"
+                    ></small>
                   </div>
                   <div class="form-group mb-3">
                     <input
@@ -619,6 +651,10 @@
                       placeholder="Your Phone Number"
                       required
                     />
+                    <small
+                      id="phoneError"
+                      class="text-danger error-message"
+                    ></small>
                   </div>
                   <div class="form-group mb-3">
                     <select
@@ -664,6 +700,10 @@
                       placeholder="Your Message"
                       required
                     ></textarea>
+                    <small
+                      id="messageError"
+                      class="text-danger error-message"
+                    ></small>
                   </div>
                   <button
                     type="submit"
@@ -689,7 +729,9 @@
                   class="text-primary mx-2 fs-4"
                   ><i class="bi bi-instagram"></i>
                 </a>
-                <a href="#" class="text-primary mx-2 fs-4"
+                <a
+                  href="https://www.linkedin.com/groups/10066820/"
+                  class="text-primary mx-2 fs-4"
                   ><i class="bi bi-linkedin"></i>
                 </a>
                 <a
@@ -712,16 +754,78 @@
       </a>
 
       <!-- Footer -->
-      <footer class="bg-dark text-white text-center py-4">
+      <footer class="footer text-white py-4">
         <div class="container">
-          <div class="mb-4">
-            <a href="#heroSection" class="text-white mx-3">Home</a>
-            <a href="#about" class="text-white mx-3">About</a>
-            <a href="#services" class="text-white mx-3">Our Services</a>
-            <a href="#faq" class="text-white mx-3">FAQs</a>
-            <a href="#contact" class="text-white mx-3">Contact Us</a>
+          <div class="row align-items-center">
+            <!-- Left Side: Logo with Centered Text -->
+            <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+              <img
+                src="/assets/images/MACS11.webp"
+                alt="MACS Associates Logo"
+                class="img-fluid d-block mx-auto"
+                style="max-width: 80px"
+              />
+              <strong class="macs-font d-block text-center"
+                >MACS <span>ASSOCIATES</span></strong
+              >
+            </div>
+
+            <!-- Center: Quick Links -->
+            <div class="col-md-5 text-center text-md-start mb-3 mb-md-0">
+              <h5 class="text-uppercase">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="#heroSection"
+                    class="text-white text-decoration-none d-block"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="text-white text-decoration-none d-block"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-white text-decoration-none d-block"
+                    >Our Services</a
+                  >
+                </li>
+                <li>
+                  <a href="#faq" class="text-white text-decoration-none d-block"
+                    >FAQs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-white text-decoration-none d-block"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right Side: Contact Information -->
+            <div class="col-md-4 text-center text-md-start">
+              <h5 class="text-uppercase">Contact Us</h5>
+              <p class="mb-1">
+                <strong>Email:</strong> info@macsassociates.com
+              </p>
+              <p class="mb-1">
+                <strong>Phone:</strong> +971 563123506, +91 8129172677
+              </p>
+            </div>
           </div>
-          <p>&copy; 2025 MACS Associates. All rights reserved.</p>
+
+          <hr class="bg-light" />
+          <p class="text-center mb-0">
+            &copy; 2025 MACS Associates. All rights reserved.
+          </p>
         </div>
       </footer>
     </main>
@@ -734,5 +838,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src="script/script.js" defer></script>
     <script src="script/form.js" defer></script>
+    <script src="script/spinner.js" defer></script>
   </body>
 </html>
